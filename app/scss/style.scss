@@ -18,7 +18,7 @@
   display: flex;
 
   &__title {
-    padding-left: 14px;
+    padding-left: 12px;
     color: $menu;
     font-size: 36px;
     line-height: 1.61;
@@ -29,6 +29,7 @@
   &__list {
     display: flex;
     font-size: 15px;
+    padding-left: 146px;
   }
 
   &__item:not(:last-child) {
