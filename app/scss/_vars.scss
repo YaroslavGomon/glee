@@ -1,0 +1,39 @@
+$accent: lighten($color: #436372, $amount: 35%);
+$menu: #436372;
+$submenu: #7b7b7b;
+$default: #243f4d;
+
+$button: #a3bbc8;
+$button-accent: #243f4d;
+$bg-orange: #fcd7b6;
+$bg-peach: #fef7f0;
+
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 600;
+}
+
+%dmsans-400{
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500{
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700{
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-700{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
