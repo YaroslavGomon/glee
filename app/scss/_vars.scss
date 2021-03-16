@@ -15,7 +15,7 @@ $bg-peach: #fef7f0;
 
 %rubik-500{
   font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 %dmsans-400{
@@ -36,4 +36,15 @@ $bg-peach: #fef7f0;
 %poppins-700{
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
+}
+
+%btn {
+  border: none;
+  background-color: $button;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $button-accent;
+  }
 }
