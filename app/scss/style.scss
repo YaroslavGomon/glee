@@ -338,6 +338,7 @@
     display: flex;
     justify-content: center;
     margin-top: -77px;
+    padding-bottom: 46px;
     position: relative;
     z-index: 99;
 
@@ -345,6 +346,7 @@
       &:not(:last-child) {
         margin-right: 10px;
       }
+
       button {
         padding: 0;
         @extend %rubik-500;
@@ -359,13 +361,103 @@
         opacity: 0.4;
         cursor: pointer;
       }
-      
+
       &.slick-active {
         button {
           opacity: 1;
         }
       }
     }
+  }
+}
+
+.advant {
+  &__items {
+    display: flex;
+    background-color: $bg-peach;
+  }
+
+  &__item {
+    min-height: 170px;
+    width: 32.2%;
+    padding-left: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    &:not(:first-child) {
+      width: 34%;
+      padding-left: 240px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid $border;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $button;
+      border-radius: 50%;
+      opacity: 0.34;
+      top: calc(50% + 5px);
+      left: 32.5%;
+    }
+  }
+
+  &__item--first::before,
+  &__item--second::before,
+  &__item--third::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: 26%;
+  }
+
+  &__item--first::before {
+    background-image: url('../images/icons/24h.png');
+  }
+
+  &__item--second::before {
+    background-image: url('../images/icons/truck.png');
+    background-position: center;
+  }
+
+  &__item--third::before {
+    background-image: url('../images/icons/credit.png');
+  }
+
+  .Ellipse_1 {
+    border-radius: 50%;
+    background-color: rgb(163, 187, 200);
+    opacity: 0.341;
+    position: absolute;
+    left: 1432px;
+    top: 1044px;
+    width: 20px;
+    height: 20px;
+    z-index: 213;
+  }
+
+
+  &__name {
+    padding-right: 140px;
+    @extend %dmsans-700;
+    font-size: 18px;
+  }
+
+  &__descr {
+    padding-right: 140px;
+    @extend %dmsans-400;
+    font-size: 16px;
+    color: $descr;
   }
 }
 
