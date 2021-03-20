@@ -434,19 +434,6 @@
     background-image: url('../images/icons/credit.png');
   }
 
-  .Ellipse_1 {
-    border-radius: 50%;
-    background-color: rgb(163, 187, 200);
-    opacity: 0.341;
-    position: absolute;
-    left: 1432px;
-    top: 1044px;
-    width: 20px;
-    height: 20px;
-    z-index: 213;
-  }
-
-
   &__name {
     padding-right: 140px;
     @extend %dmsans-700;
@@ -459,6 +446,117 @@
     font-size: 16px;
     color: $descr;
   }
+}
+
+.week {
+  text-align: center;
+
+  &__title {
+    padding-top: 66px;
+    margin-bottom: 22px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    padding-top: 73px;
+  }
+
+  &__item {
+    position: relative;
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    @extend %dmsans-700;
+    font-size: 16px;
+
+    &:hover .item__ico {
+      opacity: 1;
+    }
+  }
+}
+
+.item {
+  &__ico {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid $button;
+    border-radius: 50%;
+    top: 182px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.3s;
+
+    &:hover {
+      background-color: $button;
+    }
+  }
+
+  &__ico--search {
+    background-image: url('../images/week/search.svg');
+    left: 50px;
+
+    &:hover {
+      background-image: url('../images/week/search-inverse.svg');
+    }
+  }
+
+  &__ico--cart {
+    background-image: url('../images/week/cart.svg');
+
+    &:hover {
+      background-image: url('../images/week/cart-inverse.svg');
+    }
+  }
+
+  &__ico--heart {
+    background-image: url('../images/week/heart.svg');
+    right: 50px;
+
+    &:hover {
+      background-image: url('../images/week/heart-inverse.svg');
+    }
+  }
+
+  &__img {
+    margin: auto 0;
+  }
+
+  &__name {
+    padding-top: 20px;
+    color: $default;
+  }
+
+  &__price {
+    padding-bottom: 29px;
+    color: $button;
+  }
+}
+
+.filter {
+  &__item:not(:last-child) {
+    padding-right: 24px;
+  }
+}
+
+.mixitup-control-active {
+  color: $subtitle;
 }
 
 

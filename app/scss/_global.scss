@@ -26,3 +26,25 @@ body {
 .container.container--big {
   min-width: 1800px;
 }
+
+.subtitle {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: $subtitle;
+}
+
+.filter__btn {
+  padding: 2px;
+  @extend %dmsans-700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $filter-btn;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    color: $subtitle;
+  }
+}

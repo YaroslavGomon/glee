@@ -8,4 +8,6 @@ $(function(){
     autoplaySpead: 3000
   });
 
+  var mixer = mixitup('.week__items');
+
 });
