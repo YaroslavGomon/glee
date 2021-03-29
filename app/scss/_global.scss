@@ -13,6 +13,18 @@ body {
   flex-direction: column;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -21,10 +33,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
 
-.container.container--big {
-  min-width: 1800px;
+  &--big {
+    max-width: 1800px;
+  }
 }
 
 .subtitle {
@@ -32,19 +44,135 @@ body {
   font-size: 36px;
   line-height: 1.2;
   color: $subtitle;
+  margin-bottom: 22px;
 }
 
-.filter__btn {
-  padding: 2px;
-  @extend %dmsans-700;
-  font-size: 16px;
-  line-height: 1.2;
-  color: $filter-btn;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s;
+.filter {
+  text-align: center;
+  margin-bottom: 73px;
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    padding: 2px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $filter-btn;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $subtitle;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.product-card {
+  padding: 15px 15px 30px;
+  max-width: 270px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: margin-top 0.4s, box-shadow 0.5s;
+
+  &:hover .product-card__ico {
+    opacity: 1;
+    top: 237px;
+  }
+
   &:hover {
-    color: $subtitle;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.5);
+    margin-top: -20px;
+  }
+
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__ico {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid $button;
+    border-radius: 50%;
+    top: 335px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.3s, background-color 0.3s;
+
+    &:hover {
+      background-color: $button;
+    }
+  }
+
+  &__ico--search {
+    background-image: url('../images/week/search.svg');
+    left: 50px;
+
+    &:hover {
+      background-image: url('../images/week/search-inverse.svg');
+    }
+  }
+
+  &__ico--cart {
+    background-image: url('../images/week/cart.svg');
+
+    &:hover {
+      background-image: url('../images/week/cart-inverse.svg');
+    }
+  }
+
+  &__ico--heart {
+    background-image: url('../images/week/heart.svg');
+    right: 50px;
+
+    &:hover {
+      background-image: url('../images/week/heart-inverse.svg');
+    }
+  }
+
+  &__inner {
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__name {
+    @include text-clamp(1);
+    font-size: 16px;
+    @extend %dmsans-500;
+    color: $default;
+  }
+
+  &__price {
+    @include text-clamp(1);
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $button;
   }
 }
