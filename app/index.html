@@ -19,7 +19,7 @@
   <header class="header">
   <div class="container container--big">
     <nav class="header__inner">
-      <a class="logo" href="#">
+      <a class="logo header__logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="logotype image" width="146" height="39">
       </a>
       <div class="menu">
@@ -45,14 +45,20 @@
         </ul>
       </div>
       <div class="user-nav">
-        <button class="user-nav__link user-nav__link--search"></button>
+        <button class="user-nav__link user-nav__link--search">
+          <span class="sr-only">search button</span>
+        </button>
         <a class="user-nav__link user-nav__link--heart" href="#">
           <span class="user-nav__count">0</span>
+          <span class="sr-only">favorites button</span>
         </a>
         <a class="user-nav__link user-nav__link--cart" href="#">
           <span class="user-nav__count">0</span>
+          <span class="sr-only">shopping cart button</span>
         </a>
-        <button class="user-nav__link user-nav__link--more"></button>
+        <button class="user-nav__link user-nav__link--more">
+          <span class="sr-only">more button</span>
+        </button>
       </div>
     </nav>
   </div>
@@ -72,7 +78,9 @@
               smart and trendy
             </p>
             <div class="product-slider__text">
-              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
             </div>
             <a class="btn product-slider__link" href="#">Shop Now</a>
           </div>
@@ -86,7 +94,9 @@
               smart and trendy
             </p>
             <div class="product-slider__text">
-              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
             </div>
             <a class="btn product-slider__link" href="#">Shop Now</a>
           </div>
@@ -100,7 +110,9 @@
               smart and trendy
             </p>
             <div class="product-slider__text">
-              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
             </div>
             <a class="btn product-slider__link" href="#">Shop Now</a>
           </div>
@@ -113,34 +125,46 @@
     <div class="advant">
   <div class="container container--big">
     <ul class="advant__items">
-      <li class="advant__item advant__item--first">
-        <div class="advant__text">
-          <p class="advant__name">
-            Support 24/7.
-          </p>
-          <p class="advant__descr">
-            Contact us 24 hours a day, 7 days a week.
-          </p>
+      <li class="advant__item">
+        <div class="advant__text advant__text--first">
+          <div class="advant__name">
+            <p>
+              Support 24/7.
+            </p>
+          </div>
+          <div class="advant__descr">
+            <p>
+              Contact us 24 hours a day, 7 days a week.
+            </p>
+          </div>
         </div>
       </li>
-      <li class="advant__item advant__item--second">
-        <div class="advant__text">
-          <p class="advant__name">
-            Delivery.
-          </p>
-          <p class="advant__descr">
-            Free shipping on all US order.
-          </p>
+      <li class="advant__item">
+        <div class="advant__text advant__text--second">
+          <div class="advant__name">
+            <p>
+              Delivery.
+            </p>
+          </div>
+          <div class="advant__descr">
+            <p>
+              Free shipping on all US order.
+            </p>
+          </div>
         </div>
       </li>
-      <li class="advant__item advant__item--third">
-        <div class="advant__text">
-          <p class="advant__name">
-            100% Payment secure.
-          </p>
-          <p class="advant__descr">
-            We ensure secure payment with PEV.
-          </p>
+      <li class="advant__item">
+        <div class="advant__text advant__text--third">
+          <div class="advant__name">
+            <p>
+              100% Payment secure.
+            </p>
+          </div>
+          <div class="advant__descr">
+            <p>
+              We ensure secure payment with PEV.
+            </p>
+          </div>
         </div>
       </li>
     </ul>
@@ -153,28 +177,36 @@
     </h2>
     <ul class="filter week__filter">
       <li class="filter__item">
-        <button class="filter__btn" data-filter="all">All</button>
+        <button class="filter__btn filter1" data-filter="all">All</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-furnitures">Furnitures</button>
+        <button class="filter__btn filter1" data-filter=".category-furnitures">Furnitures</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-chairs">Chairs</button>
+        <button class="filter__btn filter1" data-filter=".category-chairs">Chairs</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-lightning">Lightning</button>
+        <button class="filter__btn filter1" data-filter=".category-lightning">Lightning</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-decor">Decor</button>
+        <button class="filter__btn filter1" data-filter=".category-decor">Decor</button>
       </li>
     </ul>
     <ul class="week__items">
       <li class="week__item mix category-lightning">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/1.png" alt="product of the week image">
           </div>
@@ -191,10 +223,18 @@
       </li>
       <li class="week__item mix category-chairs">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/2.png" alt="product of the week image">
           </div>
@@ -211,10 +251,18 @@
       </li>
       <li class="week__item mix category-chairs">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/3.png" alt="product of the week image">
           </div>
@@ -231,10 +279,18 @@
       </li>
       <li class="week__item mix category-furnitures">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/4.png" alt="product of the week image">
           </div>
@@ -251,10 +307,18 @@
       </li>
       <li class="week__item mix category-furnitures">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/5.png" alt="product of the week image">
           </div>
@@ -271,10 +335,18 @@
       </li>
       <li class="week__item mix category-lightning">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/6.png" alt="product of the week image">
           </div>
@@ -291,10 +363,18 @@
       </li>
       <li class="week__item mix category-decor">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/7.png" alt="product of the week image">
           </div>
@@ -311,10 +391,18 @@
       </li>
       <li class="week__item mix category-decor">
         <article class="product-card">
-          <a class="product-card__link" href="#"></a>
-          <a class="product-card__ico product-card__ico--search" href="#"></a>
-          <button class="product-card__ico product-card__ico--cart"></button>
-          <button class="product-card__ico product-card__ico--heart"></button>
+          <a class="product-card__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <a class="product-card__ico product-card__ico--search" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <button class="product-card__ico product-card__ico--cart">
+            <span class="sr-only">add to cart button</span>
+          </button>
+          <button class="product-card__ico product-card__ico--heart">
+            <span class="sr-only">add product to favourites button</span>
+          </button>
           <div class="product-card__inner">
             <img class="product-card__img" src="./images/week/8.png" alt="product of the week image">
           </div>
@@ -331,42 +419,52 @@
       </li>
     </ul>
   </div>
-  <div class="lamp">
+  <div class="lamps">
     <div class="container container--big">
-      <div class="lamp__items">
-        <div class="lamp__item">
-          <div class="lamp__inner">
-            <img class="lamp__img" src="./images/lamp/lamp1.png" alt="lamp image">
+      <div class="lamps__items">
+        <article class="lamps__item">
+          <a href="#" class="lamps__item-link">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <div class="lamps__inner">
+            <img class="lamps__img" src="./images/lamp/lamp1.png" alt="lamp image">
           </div>
-          <div class="lamp__text">
-            <h3 class="lamp__name">
+          <div class="lamps__text">
+            <h3 class="lamps__name">
               Mirum Notare Tellus
             </h3>
-            <p class="lamp__descr">
-              LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-            </p>
-            <a class="lamp__link" href="#">
+            <div class="lamps__descr">
+              <p>
+                LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+              </p>
+            </div>
+            <a class="lamps__link" href="#">
               View More
             </a>
           </div>
-        </div>
-        <div class="lamp__item">
-          <div class="lamp__inner">
-            <img class="lamp__img" src="./images/lamp/lamp2.png" alt="lamp image">
+        </article>
+        <article class="lamps__item">
+          <a href="#" class="lamps__item-link">
+            <span class="sr-only">link to product page</span>
+          </a>
+          <div class="lamps__inner">
+            <img class="lamps__img" src="./images/lamp/lamp2.png" alt="lamp image">
           </div>
-          <div class="lamp__text">
-            <h3 class="lamp__name">
+          <div class="lamps__text">
+            <h3 class="lamps__name">
               Malesuada Tempor
               Euismod
             </h3>
-            <p class="lamp__descr">
-              50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-            </p>
-            <a class="lamp__link" href="#">
+            <div class="lamps__descr">
+              <p>
+                50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+              </p>
+            </div>
+            <a class="lamps__link" href="#">
               View More
             </a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </div>
@@ -379,25 +477,27 @@
     </h2>
     <ul class="design__filter filter">
       <li class="filter__item">
-        <button class="filter__btn" data-filter="all">All</button>
+        <button class="filter__btn filter2" data-filter="all">All</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-fur">Furnitures</button>
+        <button class="filter__btn filter2" data-filter=".category-fur">Furnitures</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-cha">Chairs</button>
+        <button class="filter__btn filter2" data-filter=".category-cha">Chairs</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-lig">Lightning</button>
+        <button class="filter__btn filter2" data-filter=".category-lig">Lightning</button>
       </li>
       <li class="filter__item">
-        <button class="filter__btn" data-filter=".category-dec">Decor</button>
+        <button class="filter__btn filter2" data-filter=".category-dec">Decor</button>
       </li>
     </ul>
     <ul class="design__items">
       <li class="design__item mix category-lig">
         <article class="design__card" style="background-image: url('../../images/design/design1.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Beat Flat Pendant Black</h3>
             <p class="design__cat">Classic</p>
@@ -406,7 +506,9 @@
       </li>
       <li class="design__item mix category-cha">
         <article class="design__card" style="background-image: url('../../images/design/design2.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Lampe Sur Pieds Bamboo</h3>
             <p class="design__cat">Classic</p>
@@ -415,7 +517,9 @@
       </li>
       <li class="design__item mix category-cha">
         <article class="design__card" style="background-image: url('../../images/design/design3.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Rattan Rocking Chair</h3>
             <p class="design__cat">Classic</p>
@@ -424,7 +528,9 @@
       </li>
       <li class="design__item mix category-fur">
         <article class="design__card" style="background-image: url('../../images/design/design4.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Rattan Rocking Chair</h3>
             <p class="design__cat">Classic</p>
@@ -433,7 +539,9 @@
       </li>
       <li class="design__item mix category-lig">
         <article class="design__card" style="background-image: url('../../images/design/design5.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Rattan Rocking Chair</h3>
             <p class="design__cat">Classic</p>
@@ -442,7 +550,9 @@
       </li>
       <li class="design__item mix category-dec">
         <article class="design__card" style="background-image: url('../../images/design/design6.jpg');">
-          <a class="design__link" href="#"></a>
+          <a class="design__link" href="#">
+            <span class="sr-only">link to product page</span>
+          </a>
           <div class="design__descr">
             <h3 class="design__name">Lampe Sur Pieds Bamboo</h3>
             <p class="design__cat">Classic</p>
@@ -452,8 +562,11 @@
     </ul>
   </div>
 </section>
-    <div class="video" style="background-image: url(../../images/video.jpg);">
-  <a class="video__link" data-fancybox href="https://youtu.be/W4UAXoQ7dR4?t=6"></a>
+    <div class="video" style="background-image: url(/images/video.jpg);">
+  <a class="video__link" data-fancybox href="https://youtu.be/W4UAXoQ7dR4?t=6">
+    <span class="sr-only">video play button</span>
+    <div class="video__click" style="background-image: url(/images/icons/video-play.svg);"></div>
+  </a>
 </div>
     <section class="news">
   <div class="container">
@@ -463,55 +576,64 @@
     </div>
     <ul class="news__items">
       <li class="news__item">
-        <a class="news__img-link" href="#">
-          <img class="news__img" src="../../images/news/1.jpg" alt="news image">
-        </a>
-        <div class="news__box">
-          <a class="news__link" href="#">news</a>
-          <h4 class="news__name">
-            <a class="news__name-link" href="#">
-              Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </a>
-          </h4>
-          <div class="news__bottom">
-            <div class="news__date">28 january, 2020</div>
-            <author class="news__author">by admin</author>
+        <article class="news__unit">
+          <a class="news__img-link" href="#">
+            <span class="sr-only">link to news page</span>
+            <img class="news__img" src="../../images/news/1.jpg" alt="news image">
+          </a>
+          <div class="news__box">
+            <a class="news__link" href="#">news</a>
+            <h3 class="news__name">
+              <a class="news__name-link" href="#">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </a>
+            </h3>
+            <div class="news__bottom">
+              <time class="news__date" pubdate datetime="2020-01-28">28 january, 2020</time>
+              <a class="news__author" href="#">by admin</a>
+            </div>
           </div>
-        </div>
+        </article>
       </li>
       <li class="news__item">
-        <a class="news__img-link" href="#">
-          <img class="news__img" src="../../images/news/2.jpg" alt="news image">
-        </a>
-        <div class="news__box">
-          <a class="news__link" href="#">news</a>
-          <h4 class="news__name">
-            <a class="news__name-link" href="#">
-              Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            </a>
-          </h4>
-          <div class="news__bottom">
-            <div class="news__date">28 january, 2020</div>
-            <author class="news__author">by admin</author>
+        <article class="news__unit">
+          <a class="news__img-link" href="#">
+            <span class="sr-only">link to news page</span>
+            <img class="news__img" src="../../images/news/2.jpg" alt="news image">
+          </a>
+          <div class="news__box">
+            <a class="news__link" href="#">news</a>
+            <h3 class="news__name">
+              <a class="news__name-link" href="#">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              </a>
+            </h3>
+            <div class="news__bottom">
+              <time class="news__date" pubdate datetime="2020-01-28">28 january, 2020</time>
+              <a class="news__author" href="#">by admin</a>
+            </div>
           </div>
-        </div>
+        </article>
       </li>
       <li class="news__item">
-        <a class="news__img-link" href="#">
-          <img class="news__img" src="../../images/news/3.jpg" alt="news image">
-        </a>
-        <div class="news__box">
-          <a class="news__link" href="#">news</a>
-          <h4 class="news__name">
-            <a class="news__name-link" href="#">
-              Rncididunt ut labore et dolore magna aliqua. Ut enim
-            </a>
-          </h4>
-          <div class="news__bottom">
-            <div class="news__date">28 january, 2020</div>
-            <author class="news__author">by admin</author>
+        <article class="news__unit">
+          <a class="news__img-link" href="#">
+            <span class="sr-only">link to news page</span>
+            <img class="news__img" src="../../images/news/3.jpg" alt="news image">
+          </a>
+          <div class="news__box">
+            <a class="news__link" href="#">news</a>
+            <h3 class="news__name">
+              <a class="news__name-link" href="#">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+              </a>
+            </h3>
+            <div class="news__bottom">
+              <time class="news__date" pubdate datetime="2020-01-28">28 january, 2020</time>
+              <a class="news__author" href="#">by admin</a>
+            </div>
           </div>
-        </div>
+        </article>
       </li>
     </ul>
   </div>
@@ -520,34 +642,34 @@
   <div class="container">
     <ul class="partners__slider">
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/1.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/1.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/2.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/2.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/3.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/3.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/4.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/4.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/5.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/5.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/1.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/1.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/2.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/2.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/3.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/3.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/4.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/4.png" alt="pfrtner logo image">
       </li>
       <li class="partners__item">
-          <img class="partners__img" src="../../images/partners/5.png" alt="pfrtner logo image">
+          <img class="partners__img" src="/images/partners/5.png" alt="pfrtner logo image">
       </li>
     </ul>
   </div>
@@ -560,6 +682,7 @@
     <div class="footer-top">
       <div class="footer-top__unit">
         <a class="logo footer-top__logo" href="#">
+          <span class="sr-only">link to start page</span>
           <img class="logo__img" src="images/logo.png" alt="logotype image" width="146" height="39">
         </a>
         <adress class="footer-top__adress">

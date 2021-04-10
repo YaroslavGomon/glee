@@ -1,0 +1,77 @@
+.advant {
+  margin-bottom: 66px;
+
+  &__items {
+    display: flex;
+    background-color: $bg-peach;
+  }
+
+  &__item {
+    padding: 38px 0 0;
+    width: 33.3%;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child) {
+      border-right: 1px solid $border;
+    }
+  }
+
+  &__text {
+    max-width: 208px;
+    margin-left: 15%;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      background-position: top;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 10%;
+      left: -43%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $button;
+      border-radius: 50%;
+      opacity: 0.34;
+      top: 44%;
+      left: -26%;
+    }
+
+    &--first::before {
+      background-image: url('../images/icons/24h.png');
+    }
+
+    &--second::before {
+      background-image: url('../images/icons/truck.png');
+      background-position: center;
+    }
+
+    &--third::before {
+      background-image: url('../images/icons/credit.png');
+    }
+  }
+
+  &__name {
+    @include text-clamp(1);
+    @extend %dmsans-700;
+    font-size: 18px;
+  }
+
+  &__descr {
+    @include text-clamp(2);
+    @extend %dmsans-400;
+    font-size: 16px;
+    color: $descr;
+  }
+}

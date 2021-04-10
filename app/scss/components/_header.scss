@@ -1,0 +1,187 @@
+.header {
+  padding: 44px 0;
+  @extend %rubik-500;
+
+  @include r(1200) {
+    padding: 10px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include r(767) {
+      align-self: flex-start;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+}
+
+.menu {
+
+  @include r(1023) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    font-size: 15px;
+    // margin-right: -149px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  &__link {
+    color: $menu;
+    transition: color 0.3s;
+
+    &:hover,
+    &--active {
+      color: $accent;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  margin-top: 6px;
+
+  @include r(767) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    // margin-right: 70px;
+  }
+
+  &__link {
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+
+    &:first-child {
+      @include r(767) {
+        order: -2;
+        margin-right: 0;
+        margin-left: 20%;
+      }
+    }
+
+    &:last-child {
+      @include r(767) {
+        order: -1;
+        // margin-right: 50%;
+      }
+    }
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__link--search,
+  &__link--more {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  &__link--heart,
+  &__link--cart {
+    width: 89px;
+    background-color: $bg-orange;
+    transition: background-color 0.3s;
+
+    @include r(520) {
+    }
+
+    &:hover {
+      background-color: #edf1f4;
+    }
+  }
+
+  &__link--search {
+    margin-right: 20px;
+    background-color: #edf1f4;
+    border: 1px solid #edf1f4;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $button;
+    }
+
+    &::before {
+      background-image: url('../images/icons/search.svg');
+      top: 16px;
+      left: 16px;
+    }
+  }
+
+  &__link--heart {
+    border-radius: 25px 0 0 25px;
+
+    &::before {
+      background-image: url('../images/icons/heart.svg');
+      top: 20px;
+      left: 33px;
+    }
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      position: absolute;
+      top: 9px;
+      right: 0;
+    }
+  }
+
+  &__link--cart {
+    border-radius: 0 25px 25px 0;
+
+    &::before {
+      background-image: url('../images/icons/cart.svg');
+      top: 20px;
+      left: 35px;
+    }
+  }
+
+  &__link--more {
+    @include btn;
+    margin-left: 20px;
+    background-color: $button;
+    border: 1px solid $button;
+
+    &::before {
+      background-image: url('../images/icons/more.svg');
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  &__count {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 13px;
+    left: 47px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+    color: $default;
+    @extend %dmsans-400;
+  }
+}

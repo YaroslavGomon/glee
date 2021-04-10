@@ -1,0 +1,69 @@
+.video {
+  margin: 120px 0 112px;
+  max-width: 100vw;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  transition: scale 1s;
+
+  &:hover .video__click {
+    transform: scale(1.4);
+  }
+
+  &:hover .video__link::after {
+    animation: pulse 2s infinite;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $button;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &::before {
+      width: 98px;
+      height: 98px;
+      top: calc(50% - 49px);
+      left: calc(50% - 49px);
+    }
+
+    &::after {
+      width: 128px;
+      height: 128px;
+      top: calc(50% - 64px);
+      left: calc(50% - 64px);
+      opacity: 0.4;
+    }
+  }
+
+  &__click {
+    width: 22px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 1s;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    opacity: 1;
+  }
+}

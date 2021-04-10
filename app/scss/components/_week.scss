@@ -1,0 +1,123 @@
+.week {
+  text-align: center;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    margin-bottom: 186px;
+  }
+}
+
+.mixitup-control-active {
+  color: $subtitle;
+}
+
+.lamps {
+  margin-bottom: 94px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding-bottom: 85px;
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    background-color: $bg-lightpeach;
+    position: relative;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0);
+    transition: box-shadow 0.3s, border-radius 0.3s, margin 0.3s;
+
+    &:hover {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.5);
+      border-radius: 10px;
+      margin: -20px 0 20px;
+    }
+
+    &:hover .lamps__img {
+      transform: scale(1.05);
+    }
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &-link {
+      position: absolute;
+      width: 100%;
+      height: 80%;
+      z-index: 98;
+
+      &:hover .lamps__img {
+        transform: scale(1.05);
+      }
+
+    }
+  }
+
+  &__inner {
+    margin: -100px auto 0;
+    width: 50%;
+    height: 405px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+
+  &__text {
+    text-align: left;
+    width: 50%;
+  }
+
+  &__name {
+    @include text-clamp(2);
+    max-width: 70%;
+    margin-bottom: 20px;
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 1.23;
+  }
+
+  &__descr {
+    margin-bottom: 50px;
+
+    & p {
+      @include text-clamp(3);
+    }
+  }
+
+  &__link {
+    margin-bottom: 150px;
+    padding: 20px 80px 20px 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    color: $menu;
+    @extend %rubik-500;
+    position: relative;
+    z-index: 99;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $bg-orange;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/arrow-blue.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      top: 43%;
+      right: 10%;
+    }
+  }
+}

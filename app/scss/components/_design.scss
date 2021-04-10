@@ -1,0 +1,63 @@
+.design {
+  text-align: center;
+
+  &__filter {
+    margin-bottom: 70px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 34px;
+  }
+
+  &__card {
+    max-width: 370px;
+    height: 246px;
+    background-color: #f8f8f8;
+    line-height: normal;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: margin 0.4s, box-shadow 0.5s, border-radius 0.3s;
+
+    &:hover {
+      margin: -20px 0 20px;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.5);
+      border-radius: 10px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    margin-top: 0;
+  }
+
+  &__descr {
+    text-align: left;
+    position: absolute;
+    top: 37px;
+    left: 37px;
+    max-width: 180px;
+    @extend %dmsans-700;
+  }
+
+  &__name {
+    @include text-clamp(2);
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: $filter-btn-active;
+  }
+
+  &__cat {
+    @include text-clamp(1);
+    color: $button;
+  }
+}

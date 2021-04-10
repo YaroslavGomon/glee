@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container container--big">
     <nav class="header__inner">
-      <a class="logo" href="#">
+      <a class="logo header__logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="logotype image" width="146" height="39">
       </a>
       <div class="menu">
@@ -27,14 +27,20 @@
         </ul>
       </div>
       <div class="user-nav">
-        <button class="user-nav__link user-nav__link--search"></button>
+        <button class="user-nav__link user-nav__link--search">
+          <span class="sr-only">search button</span>
+        </button>
         <a class="user-nav__link user-nav__link--heart" href="#">
           <span class="user-nav__count">0</span>
+          <span class="sr-only">favorites button</span>
         </a>
         <a class="user-nav__link user-nav__link--cart" href="#">
           <span class="user-nav__count">0</span>
+          <span class="sr-only">shopping cart button</span>
         </a>
-        <button class="user-nav__link user-nav__link--more"></button>
+        <button class="user-nav__link user-nav__link--more">
+          <span class="sr-only">more button</span>
+        </button>
       </div>
     </nav>
   </div>

@@ -3,9 +3,8 @@ $(function(){
   $('.product-slider__inner').slick({
     dots: true,
     arrows: false,
-    fade: true,
-    // autoplay: true,
-    autoplaySpead: 3000
+    autoplay: true,
+    autoplaySpead: 5000
   });
 
   $('.partners__slider').slick({
@@ -14,9 +13,27 @@ $(function(){
     slidesToScroll: 5,
     dots: false,
     arrows: false,
+    autoplay: true,
+    autoplaySpead: 3000
   });
 
-  var mixer = mixitup('.week__items');
-  var mixer = mixitup('.design__items');
+  const mixin1 = document.querySelector(".week__items");
+  const mixin2 = document.querySelector(".design__items");
+
+  if (mixin1) {
+    mixitup('.week__items', {
+      selectors: {
+       control: '.filter1'
+      }
+   })
+  }
+
+  if (mixin2) {
+    mixitup('.design__items', {
+      selectors: {
+        control: '.filter2'
+     }
+   })
+  }
 
 });

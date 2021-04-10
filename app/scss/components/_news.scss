@@ -1,0 +1,166 @@
+.news {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 168px;
+    background-color: $bg-peach;
+  }
+
+  &__top {
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    @include text-clamp(1);
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  &__more {
+    @include text-clamp(1);
+    color: #262626;
+    padding-right: 23px;
+    position: relative;
+
+    &::after {
+      content: '>';
+      font-size: 24px;
+      font-weight: normal;
+      position: absolute;
+      bottom: -3px;
+      right: 0px;
+    }
+
+    &:hover {
+      color: $button;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__unit {
+    max-width: 370px;
+    background-color: #ffffff;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.5);
+    }
+  }
+
+  &__img-link {
+    display: block;
+    height: 250px;
+    overflow: hidden;
+
+    &:hover .news__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.8s;
+  }
+
+  &__box {
+    position: relative;
+    padding: 30px 30px 20px;
+  }
+
+  &__link {
+    position: absolute;
+    @include btn;
+    @extend %poppins-700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 2px 31px;
+    border-radius: 15px;
+    top: -17px;
+  }
+
+  &__name {
+    height: 81px;
+    padding-bottom: 13px;
+    @include text-clamp(3);
+    @extend %dmsans-500;
+    color: #262626;
+    font-size: 18px;
+    line-height: 1.25;
+    border-bottom: 1px solid #e0e0e0;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $button;
+    }
+  }
+
+  &__bottom {
+    padding-top: 16px;
+    display: flex;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #222933;
+  }
+
+  // я хз как скопировать иконки календаря и человечка из фотошопа, это какой-то иконочный шрифт
+
+  &__date,
+  &__author {
+    @include text-clamp(1);
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 14px;
+      height: 14px;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+
+  &__date {
+    width: 50%;
+    cursor: default;
+
+    &::before {
+      background-image: url('../../images/icons/calendar.svg');
+      opacity: 0.7;
+    }
+  }
+
+  &__author {
+    width: auto;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &::before {
+      background-image: url('../../images/icons/author.svg');
+    }
+  }
+}

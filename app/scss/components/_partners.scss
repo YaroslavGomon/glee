@@ -1,0 +1,21 @@
+.partners {
+  background-color: $bg-peach;
+  padding: 92px 0;
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__item {
+    width: 20%;
+    height: 75px;
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 220px;
+  }
+}
