@@ -1,4 +1,13 @@
 .product-slider {
+
+  &__inner {
+
+    @include r(1023) {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+  
   &__item {
     background-color: $bg-orange;
     padding: 10px 0;
@@ -11,6 +20,11 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    z-index: 1;
+
+    @include r(544) {
+      height: auto;
+    }
 
     &::after {
       content: '';
@@ -24,21 +38,46 @@
       top: 10%;
       left: 56%;
       z-index: 1;
+
+      @include r(544) {
+        top: auto;
+        bottom: auto;
+      }
     }
   }
 
   &__content {
     margin: -78px 100px 0 0;
+
+    @include r(1200) {
+      margin: 0 100px 0 0;
+    }
+
+    @include r(544) {
+      margin: 0;
+      width: 45%;
+    }
   }
 
   &__title {
     @include text-clamp (3);
-    max-width: 420px;
+    max-width: 520px;
     margin-bottom: 22px;
     text-transform: uppercase;
     @extend %rubik-500;
     font-size: 72px;
     line-height: 1;
+
+    @include r(1200) {
+      max-width: 25vw;
+      font-size: 3.75vw;
+    }
+
+    @include r(544) {
+      font-size: 18px;
+      max-width: 90%;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -48,7 +87,21 @@
     font-size: 18px;
     line-height: 1.67;
     color: $menu;
-  }
+
+    @include r(1200) {
+      max-width: 30vw;
+      font-size: 14px;
+    }
+
+    @include r(767) {
+      margin-bottom: 20px;
+    }
+
+    @include r(544) {
+      max-width: 90%;
+      margin-bottom: 10px;
+    }
+  } 
 
   &__link {
     @include btn;
@@ -56,6 +109,15 @@
     padding: 22px 100px 20px 28px;
     font-size: 15px;
     position: relative;
+
+    @include r(767) {
+      padding: 11px 50px 10px 14px;
+    }
+
+    @include r(544) {
+      font-size: 14px;
+      padding: 5px 40px 5px 7px;
+    }
 
     &::after {
       content: '';
@@ -66,6 +128,10 @@
       height: 9px;
       top: 43%;
       right: 10%;
+
+      @include r(544) {
+        top: 35%;
+      }
     }
   }
 
@@ -83,7 +149,17 @@
     margin-top: -77px;
     padding-bottom: 46px;
     position: relative;
-    z-index: 99;
+    z-index: 97;
+
+    @include r(1023) {
+      margin-top: -45px;
+    }
+
+    @include r(544) {
+      margin-top: -37px;
+      justify-content: flex-end;
+      padding-right: 15px;
+    }
 
     li {
       &:not(:last-child) {
@@ -103,6 +179,12 @@
         background-color: #ffffff;
         opacity: 0.4;
         cursor: pointer;
+
+        @include r(767) {
+          width: 20px;
+          height: 20px;
+          line-height: 1.8;
+        }
       }
 
       &.slick-active {

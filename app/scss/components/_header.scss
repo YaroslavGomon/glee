@@ -10,38 +10,74 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
-    @include r(767) {
-      align-self: flex-start;
-    }
+    position: relative;
+    z-index: 99;
   }
 }
 
 .logo {
   display: flex;
+  position: relative;
+  z-index: 999;
+
+  &.logo--active {
+    @include r(544) {
+      display: none;
+    }
+  }
 }
 
 .menu {
 
   @include r(1023) {
-    display: none;
+    position: absolute;
+    width: 100vw;
+    top: -2000px;
+    left: -15px;
+    transition: top 0.5s;
+    background-color: #fff;
+    z-index: 98;
+  }
+
+  &.menu--active {
+    top: 60px;
   }
 
   &__list {
     display: flex;
     font-size: 15px;
     // margin-right: -149px;
+
+    @include r(1023) {
+      flex-direction: column;
+      justify-content: space-around;
+      height: calc(100vh - 86px);
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    @include r(1023) {
+      text-align: center;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 34px;
+
+    @include r(1023) {
+      margin-right: 0;
+    }
   }
 
   &__link {
     color: $menu;
     transition: color 0.3s;
+
+    @include r(1023) {
+      display: block;
+      padding: 10px 0;
+    }
 
     &:hover,
     &--active {
@@ -53,11 +89,18 @@
 .user-nav {
   display: flex;
   margin-top: 6px;
+  position: relative;
+  z-index: 98;
 
-  @include r(767) {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    // margin-right: 70px;
+  @include r(544) {
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  &.user-nav--active {
+    @include r(544) {
+      width: 100%;
+    }
   }
 
   &__link {
@@ -65,18 +108,15 @@
     position: relative;
     cursor: pointer;
 
-    &:first-child {
-      @include r(767) {
-        order: -2;
-        margin-right: 0;
-        margin-left: 20%;
+    &:not(:last-child) {
+      @include r(544) {
+        display: none;
       }
     }
 
-    &:last-child {
-      @include r(767) {
-        order: -1;
-        // margin-right: 50%;
+    &.user-nav__link--active:not(:last-child) {
+      @include r(544) {
+        display: block;
       }
     }
 
@@ -101,8 +141,7 @@
     background-color: $bg-orange;
     transition: background-color 0.3s;
 
-    @include r(520) {
-    }
+    @include r(544) {}
 
     &:hover {
       background-color: #edf1f4;
@@ -114,6 +153,10 @@
     background-color: #edf1f4;
     border: 1px solid #edf1f4;
     transition: background-color 0.3s;
+
+    @include r(544) {
+      margin-right: 5px;
+    }
 
     &:hover {
       background-color: $button;
@@ -128,6 +171,10 @@
 
   &__link--heart {
     border-radius: 25px 0 0 25px;
+
+    @include r(544) {
+      margin-left: auto;
+    }
 
     &::before {
       background-image: url('../images/icons/heart.svg');
@@ -149,6 +196,10 @@
   &__link--cart {
     border-radius: 0 25px 25px 0;
 
+    @include r(544) {
+      margin-right: auto;
+    }
+
     &::before {
       background-image: url('../images/icons/cart.svg');
       top: 20px;
@@ -161,6 +212,10 @@
     margin-left: 20px;
     background-color: $button;
     border: 1px solid $button;
+
+    @include r(544) {
+      margin-left: 5px;
+    }
 
     &::before {
       background-image: url('../images/icons/more.svg');

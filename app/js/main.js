@@ -1,5 +1,12 @@
 $(function(){
 
+  $('.user-nav__link--more, .menu__link').on('click', function(){
+    $('.menu').toggleClass('menu--active');
+    $('.user-nav').toggleClass('user-nav--active');
+    $('.user-nav__link').toggleClass('user-nav__link--active');
+    $('.logo').toggleClass('logo--active');
+  });
+
   $('.product-slider__inner').slick({
     dots: true,
     arrows: false,
